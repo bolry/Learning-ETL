@@ -1,3 +1,4 @@
+#[[
 MIT License
 
 Copyright © 2021 Bo Rydberg
@@ -19,3 +20,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+]]
+
+
+add_executable(intro)
+target_sources(intro PRIVATE main.cpp)
+target_link_libraries(
+        intro
+        PRIVATE project_options
+        project_warnings
+        Microsoft.GSL::GSL
+        fmt::fmt
+        spdlog::spdlog)
